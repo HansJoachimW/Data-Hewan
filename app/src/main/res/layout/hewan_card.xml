@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:backgroundTint="#000000"
+    android:foregroundTint="#000000">
+
+    <androidx.gridlayout.widget.GridLayout
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="32dp"
+        android:layout_marginEnd="16dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:cardBackgroundColor="#F24C4C4C"
+            app:cardCornerRadius="32dp">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <Button
+                    android:id="@+id/animalBtnDelete"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="8dp"
+                    android:backgroundTint="#AC0000"
+                    android:text="Delete"
+                    app:layout_constraintStart_toEndOf="@+id/animalBtnEdit"
+                    app:layout_constraintTop_toTopOf="@+id/animalBtnEdit" />
+
+                <Button
+                    android:id="@+id/animalBtnEdit"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:backgroundTint="#16885A"
+                    android:text="Edit"
+                    app:layout_constraintBottom_toBottomOf="@+id/animalImage"
+                    app:layout_constraintStart_toStartOf="@+id/animalAge" />
+
+                <TextView
+                    android:id="@+id/aniamlAgeValue"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="8dp"
+                    android:text="Placeholder"
+                    android:textColor="#FFFFFF"
+                    app:layout_constraintBottom_toBottomOf="@+id/animalAge"
+                    app:layout_constraintStart_toEndOf="@+id/animalAge"
+                    app:layout_constraintTop_toTopOf="@+id/animalAge" />
+
+                <TextView
+                    android:id="@+id/animalAge"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:text="Age:"
+                    android:textColor="#FFFFFF"
+                    app:layout_constraintStart_toStartOf="@+id/animalSpecies"
+                    app:layout_constraintTop_toBottomOf="@+id/animalSpecies" />
+
+                <TextView
+                    android:id="@+id/animalSpecies"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:text="Species"
+                    android:textColor="#FFFFFF"
+                    app:layout_constraintStart_toStartOf="@+id/animalName"
+                    app:layout_constraintTop_toBottomOf="@+id/animalName" />
+
+                <TextView
+                    android:id="@+id/animalName"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="16dp"
+                    android:text="Animal"
+                    android:textColor="#FFFFFF"
+                    android:textSize="20sp"
+                    android:textStyle="bold"
+                    app:layout_constraintStart_toEndOf="@+id/animalImage"
+                    app:layout_constraintTop_toTopOf="@+id/animalImage" />
+
+                <ImageView
+                    android:id="@+id/animalImage"
+                    android:layout_width="128dp"
+                    android:layout_height="150dp"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginBottom="8dp"
+                    android:src="@drawable/animal"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"></ImageView>
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </androidx.cardview.widget.CardView>
+
+    </androidx.gridlayout.widget.GridLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>
