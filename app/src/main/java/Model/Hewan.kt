@@ -7,20 +7,20 @@ data class Hewan(
     var name:String?,
     var species: String?,
     var age:String?,
-    var history:String?):Parcelable {
+    var imageUri:String?=""):Parcelable {
     constructor(parcel: Parcel) : this(
         parcel.readString(),
         parcel.readString(),
         parcel.readString(),
         parcel.readString()
     )
-    var imageUri:String?=""
+
 
     override fun writeToParcel(parcel: Parcel, flags: Int) {
         parcel.writeString(name)
         parcel.writeString(species)
         parcel.writeString(age)
-        parcel.writeString(history)
+        parcel.writeString(imageUri)
     }
 
 

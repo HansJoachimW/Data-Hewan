@@ -23,7 +23,7 @@ class ListHewanRVAdapter(val listHewan: ArrayList<Hewan>, val cardListener: Card
                 binding.animalImage.setImageURI(Uri.parse(data.imageUri))
             }
             itemView.setOnClickListener{
-                cardListener1.onCardClick(adapterPosition)
+                cardListener1.onCardClick(true, adapterPosition)
             }
         }
     }

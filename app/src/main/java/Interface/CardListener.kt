@@ -1,5 +1,5 @@
 package Interface
 
 interface CardListener {
-    fun onCardClick(position: Int)
+    fun onCardClick(check: Boolean, position: Int)
 }
