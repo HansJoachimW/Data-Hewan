@@ -52,9 +52,9 @@ class HomeActivity : AppCompatActivity(), CardListener {
     }
 
     private fun setupRecyclerView(){
-        val layoutManager = GridLayoutManager(baseContext,2)
-        binding.listHewanRV.layoutManager= layoutManager //Set layout
-        binding.listHewanRV.adapter=adapter //Set adapter
+        val layoutManager = GridLayoutManager(baseContext,1)
+        binding.listHewanRV.layoutManager= layoutManager
+        binding.listHewanRV.adapter=adapter
     }
 
 
@@ -69,17 +69,17 @@ class HomeActivity : AppCompatActivity(), CardListener {
             val confirm = AlertDialog.Builder(this)
             confirm.setTitle("Hapus Hewan?").setMessage("Apakah Anda benar-benar yakin dengan keputusan Anda?")
 
-            confirm.setPositiveButton(android.R.string.yes) { _, _ ->
+            confirm.setPositiveButton(android.R.string.yes) { function, which ->
                 val success = Snackbar.make(binding.listHewanRV, "Hewan Terhapus", Snackbar.LENGTH_INDEFINITE)
 
                 success.setAction("Dismiss") {
                     success.dismiss()
-                    success.setActionTextColor(Color.WHITE)
-                    success.setBackgroundTint(Color.GRAY)
-                    success.show()
-                    GlobalVar.listDataHewan.removeAt(position)
-                    adapter.notifyDataSetChanged()
                 }
+                success.setActionTextColor(Color.WHITE)
+                success.setBackgroundTint(Color.GRAY)
+                success.show()
+                GlobalVar.listDataHewan.removeAt(position)
+                adapter.notifyDataSetChanged()
             }
 
             confirm.setNegativeButton(android.R.string.no) { dialog, which ->

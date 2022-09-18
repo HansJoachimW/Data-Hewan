@@ -19,7 +19,7 @@
         app:layout_constraintTop_toTopOf="parent">
 
         <androidx.cardview.widget.CardView
-            android:layout_width="371dp"
+            android:layout_width="wrap_content"
             android:layout_height="match_parent"
             app:cardBackgroundColor="#FFAEA7A7"
             app:cardCornerRadius="32dp">

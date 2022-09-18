@@ -120,7 +120,7 @@ class CreateActivity : AppCompatActivity() {
             if (position == -1) {
                 tempHewan.imageUri = tempUri
                 GlobalVar.listDataHewan.add(tempHewan)
-                Toast.makeText(this, "Student Successfully Added", Toast.LENGTH_SHORT).show()
+                Toast.makeText(this, "Animal Successfully Added", Toast.LENGTH_SHORT).show()
                 val myIntent = Intent(this, HomeActivity::class.java)
                 startActivity(myIntent)
             } else {
@@ -132,7 +132,7 @@ class CreateActivity : AppCompatActivity() {
                     tempHewan.imageUri = tempUri
                 }
                 GlobalVar.listDataHewan[position] = tempHewan
-                Toast.makeText(this, "Class Successfully Edited", Toast.LENGTH_SHORT).show()
+                Toast.makeText(this, "Animal Successfully Edited", Toast.LENGTH_SHORT).show()
                 val myIntent = Intent(this, HomeActivity::class.java)
                 startActivity(myIntent)
             }
